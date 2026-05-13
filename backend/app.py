@@ -3,13 +3,12 @@ from flask_cors import CORS
 from newspaper import Article
 from groq import Groq
 import json
+import os
 
 app = Flask(__name__)
 CORS(app)
 
-client = Groq(
-    api_key="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"
-)
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 @app.route("/")
 def home():
