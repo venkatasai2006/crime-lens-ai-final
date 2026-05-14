@@ -13,6 +13,6 @@ export default defineConfig({
 
   server: {
     host: "0.0.0.0",
-    allowedHosts: ["crime-lens-ai-web.onrender.com"],
+    allowedHosts: true,
   },
 });
